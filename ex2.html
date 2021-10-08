@@ -5,58 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link type="text/css" rel="stylesheet" href="1.css">
+    <link type="text/css" rel="stylesheet" href="stylesheet.css">
 <script type="text/javascript" src="scripts.js"></script>
 
 </head>
 <h1>Thinh Nguyen Din19 Team 18 </h1>
-<h2>Exercise2</h2>
 <body>
         <div id="navbar">
                 <ul>
-                      <li><a href="home.html">home</a></li>
+                    <li><a href="home.html">HOME</a></li>
+                    <li><a href="ex1.html">EXERCICE 1</a></li>
+		            <li><a href="ex2.html">EXERCICE 2</a></li>
+                    <li><a href="ex3.html">EXERCICE 3</a></li>
+                    <li><a href="ex4.html">EXERCICE 4</a></li>
+                    <li><a href="ex5.html">EXERCICE 5</a></li>
                 </ul>
-       </div>
-        
-        <p>Number system outputs
-        Print a table showing decimals 0-50 in BIN, OCT and HEX systems. Additional requirements: Use a table style. Add also a Clear button to clear the table.</p>
         </div>
-<div class="main">
-    <center><div>
-        <h4 class="tablecap">This table show decimals 0-50 in Hex, Oct and Bin system.</h4>
-        
-    </div>
-    <table cellpanding="4" cellspacing="0" sumary="" class="table ibm-grid" rules="all" frame="border" border="1">
-            <thead id="table1" class="thead" align="left">
-                    <tr class="row">
-                        <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e23">Decimal</th>
-                        <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e25">Hexadecimal</th>
-                        <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e27">Octal</th>
-                        <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e29">Binary</th>
+        <h2>Exercise2</h2>
+        <p class="ex2">Number system outputs Print a table showing decimals 0-50 in BIN, OCT and HEX systems. Additional requirements: Use a table style. Add also a Clear button to clear the table.</p>
+        </div>
+        <div class="main">
+            <center>
+                <div>
+                    <h4 class="tablecap">This table show decimals 0-50 in Hex, Oct and Bin system.</h4>
+                </div>
+            <table cellpanding="4" cellspacing="0" sumary="" class="table ibm-grid" rules="all" frame="border" border="1">
+                    <thead id="table1" class="thead" align="left">
+                            <tr class="row">
+                                <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e23">Decimal</th>
+                                <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e25">Hexadecimal</th>
+                                <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e27">Octal</th>
+                                <th class="entry thcenter" align="center" valign="top" width="20%" id="d109406e29">Binary</th>
+                            </tr>
+                        </thead>
+            </table>
+            <br>
+            <button id="clear-button">Clear</button>
+            <script type="text/javascript">function createTable (maxNumber) {
+            var decimalArray = [];
+            for (var index = 0; index <= maxNumber; index++) {
+                var number1 = index.toString(10); // Number converted to Decimal
+                var number2 = index.toString(16); // Number converted to Hexadecimal
+                var number3 = index.toString(8); // Number converted to Octal
+                var number4 = index.toString(2); // Number converted to Binary
+                var table1 = document.getElementById('table1');
+                var template = `
+                    <tr>
+                        <td class="entry tdcenter" align="center" valign="top" width="20%">${number1}</td>
+                        <td class="entry tdcenter" align="center" valign="top" width="20%">${number2}</td>
+                        <td class="entry tdcenter" align="center" valign="top" width="20%">${number3}</td>
+                        <td class="entry tdcenter" align="center" valign="top" width="20%">${number4}</td>
                     </tr>
-                </thead>
-    </table>
-    <br>
-    <button id="clear-button">Clear</button>
-    <script type="text/javascript">function createTable (maxNumber) {
-    var decimalArray = [];
-    for (var index = 0; index <= maxNumber; index++) {
-        var number1 = index.toString(10); // Number converted to Decimal
-        var number2 = index.toString(16); // Number converted to Hexadecimal
-        var number3 = index.toString(8); // Number converted to Octal
-        var number4 = index.toString(2); // Number converted to Binary
-        var table1 = document.getElementById('table1');
-        var template = `
-            <tr>
-                <td class="entry tdcenter" align="center" valign="top" width="20%">${number1}</td>
-                <td class="entry tdcenter" align="center" valign="top" width="20%">${number2}</td>
-                <td class="entry tdcenter" align="center" valign="top" width="20%">${number3}</td>
-                <td class="entry tdcenter" align="center" valign="top" width="20%">${number4}</td>
-            </tr>
-        `;
-        table1.insertAdjacentHTML('beforeend', template);
-    }
-}
+                `;
+                table1.insertAdjacentHTML('beforeend', template);
+            }
+        }
 function clearTable() {
     console.log('clear button has been clicked');
     var x = document.getElementById("table1");

@@ -1,0 +1,99 @@
+body {
+	background-color: white;
+	margin: 0px;
+	font-family: Verdana, georgia, serif;
+	font-size: 14px;
+}
+/* <!-- =========================================================HEADER============================================= --> */
+#header {
+	background-color: #00cec9;
+	margin: 10px;
+	height: 90px;
+	border-radius: 5px;
+}
+
+h3{ 
+	color: #fff;
+}
+
+/* <!-- =========================================================MENU========================================================= --> */
+#navbar ul {
+	background-color: #00b894;
+	list-style-type:none;
+	text-align:center;
+	margin: 10px;
+	border-radius: 5px;
+	padding:5px;
+}
+#navbar ul li {
+	display:inline;
+}
+#navbar ul li a {
+	text-decoration:none;
+	font-family:arial;
+	padding: .2em 1em;
+	color: #fff;
+}
+#navbar ul li a:hover {
+	color: #000;
+}
+/* ======================================description or exercice================================================== */
+.main { 
+    background-color: #fff;
+	margin-top: 10px;
+	margin-right: 320px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+    padding: 20px;
+    font-size: 110%;
+	border-radius: 5px;
+}
+.main1 { 
+    background-color: #e5e4d7;
+	margin-top: 10px;
+	margin-right: 60px;
+	margin-left: 60px;
+	margin-bottom: 10px;
+    padding: 20px;
+    font-size: 110%;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.sideright { 
+    background-color: #e5e4d7;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+    padding: 20px;
+    font-size: 105%;
+	border-radius: 5px;
+	float: right;
+	width: 260px;
+	clear:right;
+}
+#home
+/* ==================================titles=================================================== */
+
+h2 {
+	font-size: 120%;
+	color:#00b894;
+} 
+h3 {
+	
+	font-size: 250%;
+	text-align: center;
+	color:#fff;
+	font-family: "Century Gothic", "Gill Sans", Arial, sans-serif;
+	margin: 0px;
+	position: relative;
+  	top: 50%;
+  	-webkit-transform: translateY(-50%);
+  	-ms-transform: translateY(-50%);
+  	transform: translateY(-50%);position: relative;
+}
+
+.ex2  {
+	text-align: center;
+}

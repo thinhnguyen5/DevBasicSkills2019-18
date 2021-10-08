@@ -1,21 +1,16 @@
-var comTabEle =
-document.getElementById("com");
+var comTabEle = document.getElementById("com");
 
-var comTabContentEle =
-document.getElementById("com-container");
+var comTabContentEle = document.getElementById("com-container");
 
 
 
-var pemTabEle =
-document.getElementById("pem");
+var pemTabEle = document.getElementById("pem");
 
-var pemTabContentEle =
-document.getElementById("pem-container");
+var pemTabContentEle = document.getElementById("pem-container");
 
 
 
-var activeClass =
-'active'; 
+var activeClass = 'active'; 
 
 comTabEle.addEventListener("click",
 selectComTab);
@@ -75,29 +70,22 @@ comTabContentEle.classList.remove(activeClass);
 
 function factorial(number) {
 
-var value =
-number;
+var value = number;
 
 for (var
-i = number;
-i > 1; 
-i--)
+    i = number;
+    i > 1; 
+    i--)
 
-value *= i -
-1;
+value *= i -1;
 
 return value;
 
 
 };
 
-function combination(n1,
-k1) {
-
-if (k1 >
-n1 || n1 ==
-"" || k1=="")
-
+function combination(n1, k1) {
+    if (k1 > n1 || n1 == "" || k1=="")
 {
 
 alert ("You must enter decimal number for n and k. Also k <= n.");
@@ -116,69 +104,47 @@ return "Math error";
 
 }
 
-else if (n1 ==
-k1)
+else if (n1 == k1)
 
 return 1;
 
-return factorial(n1) / (factorial(k1) *
-factorial(n1 -
-k1));
-
-
-
-}
-
-;
+return factorial(n1) / (factorial(k1) *factorial(n1 - k1));
+};
 
 document.getElementById("combination").onclick =
 function () {
 
-var n1 =
-parseFloat(document.getElementById('n1').value),
+var n1 = parseFloat(document.getElementById('n1').value),
 
 k1 = parseFloat(document.getElementById('k1').value);
 
 
-if (n1 &&
-k1) {
+if (n1 && k1) {
 
-document.getElementById("result").innerHTML =
-combination(n1,
-k1);
-
-}
-
+document.getElementById("result").innerHTML = combination(n1, k1);
+    }
 };
 
 
 
 
 
-function permutation(n2,
-k2) {
+function permutation(n2, k2) {
+    if ( k2 > n2 || n2 == "" || k2 == "") {
+        alert ("You must enter decimal number for n and k. Also k <= n.");
 
-if ( k2 >
-n2 || n2 ==
-"" || k2 ==
-"") {
+        document.getElementById("n2").value =
+        "";
 
-alert ("You must enter decimal number for n and k. Also k <= n.");
+        document.getElementById("n2").focus();
 
-document.getElementById("n2").value =
-"";
+        document.getElementById("k2").value =
+        "";
 
-document.getElementById("n2").focus();
-
-document.getElementById("k2").value =
-"";
-
-document.getElementById("k2").focus();
-
+        document.getElementById("k2").focus();
 return "Math error";
 
-} else if (n2 ==
-k2) {
+} else if (n2 == k2) {
 
 return 1;
 
@@ -186,8 +152,7 @@ return 1;
 
 
 
-var isChecked =
-document.querySelector('#hello').checked;
+var isChecked = document.querySelector('#hello').checked;
 
 
 if (isChecked) {
